@@ -21,6 +21,10 @@ namespace Assignment_2
         {
             if (comboBox1.SelectedIndex == 0)
             {
+                r3txt.Text = "";
+                r4txt.Text = "";
+                r5txt.Text = "";
+
                 r3txt.Hide();
                 r3lbl.Hide();
                 r4txt.Hide();
@@ -62,7 +66,10 @@ namespace Assignment_2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == 0)
+            {
 
+            }
         }
     }
 }
