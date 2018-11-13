@@ -16,7 +16,7 @@ namespace Assignment_2
         {
             InitializeComponent();
         }
-
+        //Drop down box to hide and show selected resistors for both series and parallel circuits
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 0)
@@ -68,7 +68,7 @@ namespace Assignment_2
             }
         
         }
-
+        // Calculations and button press for parallel 
         private void button2_Click(object sender, EventArgs e)
         {
             double R1, R2, R3, R4, R5;
@@ -122,7 +122,7 @@ namespace Assignment_2
             double p = 1.0 / rrt;
             Pans.Text = "Answer = " + p;
         }
-
+        // Series combo box
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox2.SelectedIndex == 0)
@@ -174,7 +174,7 @@ namespace Assignment_2
             }
 
         }
-
+        // Calculations and button press for series
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -204,8 +204,22 @@ namespace Assignment_2
                 {
                     p5 = 0;
                 }
-            p1 = Convert.ToDouble(r1text.Text);
-            p2 = Convert.ToDouble(r2text.Text);
+            try
+            {
+                p1 = Convert.ToDouble(r1text.Text);
+            }
+            catch
+            {
+                p1 = 0;
+            }
+            try
+            {
+                p2 = Convert.ToDouble(r2text.Text);
+            }
+            catch
+            {
+                p2 = 0;
+            }
 
 
             double R = p1 + p2 + p3 + p4 + p5;
